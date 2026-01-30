@@ -31,5 +31,18 @@ function sortLeaderboard() {
 
 sortLeaderboard(); // Call to display sorted leaderboard
 
+function addPlayer() {
+    const name = document.getElementById('newName').value;
+    const score = parseInt(document.getElementById('newScore').value);
+
+    if (name && !isNaN(score)) {
+        players.push({ name, score }); // Add player to array
+        sortLeaderboard(); // Refresh sorted leaderboard
+    } else {
+        alert("Please enter a valid name and score.");
+    }
+}
+
+
 
 
