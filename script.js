@@ -21,6 +21,13 @@ function populateLeaderboard(data) {
             <td>${player.score}</td>
         `;
         table.appendChild(row); // Add the row to the table
+
+        // Highlight the top player
+        if (index === 0) {
+          row.classList.add("top-player");
+        }
+        table.appendChild(row);
+        
     });
 }
 
