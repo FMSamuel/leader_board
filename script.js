@@ -27,6 +27,7 @@ function populateLeaderboard(data) {
 function sortLeaderboard() {
     players.sort((a, b) => b.score - a.score); // Sort by score descending
     populateLeaderboard(players); // Refresh the table
+    saveToLocalStorage()
 }
 
 sortLeaderboard(); // Call to display sorted leaderboard
@@ -54,4 +55,7 @@ function filterLeaderboard() {
     }
 }
 
-
+// Function to save leaderboard data to local storage
+function saveToLocalStorage() {
+  localStorage.setItem("players", JSON.stringify(players));
+}
