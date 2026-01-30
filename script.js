@@ -7,12 +7,12 @@ const players = [
 function populateLeaderboard(data) {
     const table = document.getElementById('leaderboard'); // Access the table
 
-    table.innerHTML = `
+    /*table.innerHTML = `
         <tr>
             <th>Player</th>
             <th>Score</th>
         </tr>
-    `; // Reset table header
+    `; // Reset table header*/
     
     data.forEach(player => {
         const row = document.createElement('tr'); // Create a new row
