@@ -37,7 +37,6 @@ function sortLeaderboard() {
     saveToLocalStorage()
 }
 
-sortLeaderboard(); // Call to display sorted leaderboard
 
 function addPlayer() {
     const name = document.getElementById('newName').value;
@@ -66,3 +65,6 @@ function filterLeaderboard() {
 function saveToLocalStorage() {
   localStorage.setItem("players", JSON.stringify(players));
 }
+
+sortLeaderboard(); // Call to display sorted leaderboard
+
