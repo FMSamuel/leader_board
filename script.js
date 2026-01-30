@@ -16,5 +16,12 @@ function populateLeaderboard(data) {
     });
 }
 
-populateLeaderboard(players); // Populate the leaderboard on page load
+function sortLeaderboard() {
+    players.sort((a, b) => b.score - a.score); // Sort by score descending
+    populateLeaderboard(players); // Refresh the table
+}
+
+sortLeaderboard(); // Call to display sorted leaderboard
+
+
 
